@@ -1,0 +1,317 @@
+@charset 'utf-8';
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: #0a174e;
+}
+span,
+p,
+a {
+  color: #f5d042;
+}
+.header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  border-bottom: 1px solid black;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+.header-logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-logo img {
+  border-radius: 20px;
+}
+
+input[id="hambuger"] {
+  display: none;
+}
+input[id="hambuger"] + label {
+  display: block;
+  width: 34px;
+  height: 26px;
+  position: fixed;
+  cursor: pointer;
+  top: 4%;
+  right: 1rem;
+}
+input[id="hambuger"] + label div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  background: #000;
+  transition: all 0.3s;
+}
+input[id="hambuger"] + label div:nth-child(1) {
+  top: 0;
+}
+input[id="hambuger"] + label div:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+input[id="hambuger"] + label div:nth-child(3) {
+  bottom: 0;
+}
+input[id="hambuger"]:checked + label div:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+input[id="hambuger"]:checked + label div:nth-child(2) {
+  opacity: 0;
+}
+input[id="hambuger"]:checked + label div:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+input[id="hambuger"]:checked ~ .header-menu {
+  right: 26%;
+}
+
+.header-menu {
+  width: 50%;
+  height: 90px;
+  position: absolute;
+  right: -720px;
+  transition: all 0.85s;
+  top: 50%;
+  transform: translateY(-20%);
+}
+.header-menu ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: 700;
+}
+.section-0 {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 30vh;
+}
+.section-who {
+  width: 100%;
+  height: 430px;
+}
+.section-0 p:nth-child(1) {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: "Merriweather", serif;
+}
+.section-0 p:nth-child(2) {
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.section-who__text {
+  width: 320px;
+  float: left;
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
+.section-who__img {
+  width: 360px;
+  overflow: hidden;
+  float: right;
+  margin-top: 2rem;
+  display: block;
+  margin-right: 2rem;
+}
+.section-who__img img {
+  width: 360px;
+  height: 360px;
+  float: right;
+  transition: transform 0.2s ease-in;
+}
+.section-who__img img:hover {
+  transform: scale(1.1);
+}
+.section-when {
+  width: 100%;
+  height: 430px;
+}
+.section-when__text {
+  width: 320px;
+  float: right;
+  margin-top: 8rem;
+  margin-right: 2rem;
+}
+.section-when__img {
+  width: 360px;
+  float: left;
+  display: block;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.section-when__img img {
+  width: 360px;
+  height: 360px;
+  transition: transform 0.2s ease-in;
+}
+.section-when__img img:hover {
+  transform: scale(1.1);
+}
+
+.section-where {
+  width: 100%;
+  height: 430px;
+}
+.section-where__text {
+  width: 320px;
+  float: left;
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
+.section-where__img {
+  width: 360px;
+  float: right;
+  display: block;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.section-where__img img {
+  width: 360px;
+  height: 360px;
+  transition: transform 0.2s ease-in;
+}
+.section-where__img img:hover {
+  transform: scale(1.1);
+}
+
+.section-with {
+  width: 100%;
+  height: 430px;
+}
+.section-with__text {
+  width: 300px;
+  float: right;
+  margin-top: 8rem;
+  margin-right: 2rem;
+}
+.section-with__img {
+  width: 360px;
+  float: left;
+  display: block;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.section-with__img img {
+  width: 360px;
+  height: 360px;
+  transition: transform 0.2s ease-in;
+}
+.section-with__img img:hover {
+  transform: scale(1.1);
+}
+
+.section-1 {
+  width: 98%;
+  overflow: hidden;
+  margin: auto;
+  padding-bottom: 50vh;
+}
+.section-1__title {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  font-size: 10rem;
+  font-family: "Black Han Sans", sans-serif;
+}
+.section-1__main {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.section-1__main div {
+  width: 100%;
+  height: 306px;
+  text-align: center;
+  position: relative;
+}
+.section-1__main div img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s linear;
+}
+.section-1__main div p {
+  width: 200px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 130px;
+  left: 70px;
+  z-index: 0;
+}
+.section-1__main div img:hover {
+  opacity: 1;
+}
+.section-2 {
+  width: 100%;
+  overflow: hidden;
+}
+.section-2 .title {
+  width: 100%;
+  height: 40vh;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 10rem;
+  font-family: "Black Han Sans", sans-serif;
+}
+.section-2 .main {
+  width: 100%;
+  height: 80vh;
+}
+.section-2 .main .right {
+  width: 50%;
+  overflow: hidden;
+  float: right;
+}
+.section-2 .main .right div {
+  border: 1px solid black;
+  width: 40%;
+  height: 30vh;
+  float: left;
+  margin: 1.5rem;
+}
+.section-2 .main .left {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.section-2 .main .left div {
+  width: 90%;
+  height: 70vh;
+  border: 1px solid black;
+  margin: auto;
+}
+.section-3 {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 200vh;
+  border: 1px solid red;
+}
